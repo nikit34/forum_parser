@@ -1,0 +1,2882 @@
+
+
+
+
+Терминалы Оплаты Реутов Телекома - Терминалы оплаты Реутов Телекома - Форумы г.Реутов
+
+
+
+
+		//<![CDATA[
+			jsDebug			= 0; /* Must come before JS includes */
+			DISABLE_AJAX	= parseInt(0); /* Disables ajax requests where text is sent to the DB; helpful for charset issues */
+			inACP			= false;
+			var isRTL		= false;
+			var rtlIe		= '';
+			var rtlFull		= '';
+		//]]>
+		
+
+
+
+
+		img.bbc_img { max-width: 100% !important; }
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//<![CDATA[
+		/* ---- URLs ---- */
+		ipb.vars['base_url'] 			= 'http://forum.reutov.ru/index.php?s=f658d13ed08e3941879acc45878dd74b&';
+		ipb.vars['board_url']			= 'http://forum.reutov.ru';
+		ipb.vars['img_url'] 			= "http://forum.reutov.ru/public/style_images/master";
+		ipb.vars['loading_img'] 		= 'http://forum.reutov.ru/public/style_images/master/loading.gif';
+		ipb.vars['active_app']			= 'forums';
+		ipb.vars['upload_url']			= 'http://forum.reutov.ru/uploads';
+		/* ---- Member ---- */
+		ipb.vars['member_id']			= parseInt( 0 );
+		ipb.vars['is_supmod']			= parseInt( 0 );
+		ipb.vars['is_admin']			= parseInt( 0 );
+		ipb.vars['secure_hash'] 		= '880ea6a14ea49e853634fbdc5015a024';
+		ipb.vars['session_id']			= 'f658d13ed08e3941879acc45878dd74b';
+		ipb.vars['twitter_id']			= 0;
+		ipb.vars['fb_uid']				= 0;
+		ipb.vars['auto_dst']			= parseInt( 0 );
+		ipb.vars['dst_in_use']			= parseInt(  );
+		ipb.vars['is_touch']			= false;
+		ipb.vars['member_group']		= {"g_mem_info":"0"}
+		/* ---- cookies ----- */
+		ipb.vars['cookie_id'] 			= '_ipb3';
+		ipb.vars['cookie_domain'] 		= '.forum.reutov.ru';
+		ipb.vars['cookie_path']			= '/';
+		/* ---- Rate imgs ---- */
+		ipb.vars['rate_img_on']			= 'http://forum.reutov.ru/public/style_images/master/star.png';
+		ipb.vars['rate_img_off']		= 'http://forum.reutov.ru/public/style_images/master/star_off.png';
+		ipb.vars['rate_img_rated']		= 'http://forum.reutov.ru/public/style_images/master/star_rated.png';
+		/* ---- Uploads ---- */
+		ipb.vars['swfupload_swf']		= 'http://forum.reutov.ru/public/js/3rd_party/swfupload/swfupload.swf';
+		ipb.vars['swfupload_enabled']	= true;
+		ipb.vars['use_swf_upload']		= ( '' == 'flash' ) ? true : false;
+		ipb.vars['swfupload_debug']		= false;
+		/* ---- other ---- */
+		ipb.vars['highlight_color']     = "#ade57a";
+		ipb.vars['charset']				= "UTF-8";
+		ipb.vars['time_offset']			= "3";
+		ipb.vars['hour_format']			= "12";
+		ipb.vars['seo_enabled']			= 0;
+		
+		/* Templates/Language */
+		ipb.templates['inlineMsg']		= "";
+		ipb.templates['ajax_loading'] 	= "<div id='ajax_loading'><img src='http://forum.reutov.ru/public/style_images/master/ajax_loading.gif' alt='" + ipb.lang['loading'] + "' /></div>";
+		ipb.templates['close_popup']	= "<img src='http://forum.reutov.ru/public/style_images/master/close_popup.png' alt='x' />";
+		ipb.templates['rss_shell']		= new Template("<ul id='rss_menu' class='ipbmenu_content'>#{items}</ul>");
+		ipb.templates['rss_item']		= new Template("<li><a href='#{url}' title='#{title}'>#{title}</a></li>");
+		
+		ipb.templates['autocomplete_wrap'] = new Template("<ul id='#{id}' class='ipb_autocomplete' style='width: 250px;'></ul>");
+		ipb.templates['autocomplete_item'] = new Template("<li id='#{id}' data-url='#{url}'><img src='#{img}' alt='' class='ipsUserPhoto ipsUserPhoto_mini' />&nbsp;&nbsp;#{itemvalue}</li>");
+		ipb.templates['page_jump']		= new Template("<div id='#{id}_wrap' class='ipbmenu_content'><h3 class='bar'>Перейти к странице</h3><p class='ipsPad'><input type='text' class='input_text' id='#{id}_input' size='8' /> <input type='submit' value='ОК' class='input_submit add_folder' id='#{id}_submit' /></p></div>");
+		ipb.templates['global_notify'] 	= new Template("<div class='popupWrapper'><div class='popupInner'><div class='ipsPad'>#{message} #{close}</div></div></div>");
+		
+		
+		ipb.templates['header_menu'] 	= new Template("<div id='#{id}' class='ipsHeaderMenu boxShadow'></div>");
+		
+		Loader.boot();
+	//]]>
+	
+
+
+Перейти к содержимому
+
+
+
+
+
+
+
+
+
+									    
+									Вход   
+								
+
+Регистрация
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Поиск
+Расширенный
+
+
+
+
+Искать в:
+
+
+Эта тема
+
+
+Форумы
+Пользователи
+Помощь
+
+
+Файлы
+								
+
+
+
+Календарь
+								
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Просмотр новых публикаций
+
+Reutov.ru
+Форумы
+Файлы
+Календарь
+Пользователи
+
+Больше 
+
+
+
+
+
+
+
+
+
+
+
+Форумы г.Реутов
+
+
+
+→
+Официальная информация
+
+
+→
+Терминалы оплаты Реутов Телекома
+
+
+
+
+
+
+Отключен JavaScript
+У вас отключен JavaScript. Некоторые возможности системы не будут работать. Пожалуйста, включите JavaScript для получения доступа ко всем функциям.
+
+
+
+
+
+//<![CDATA[
+	ipb.topic.inSection    = 'topicview';
+	ipb.topic.topic_id     = 12836;
+	ipb.topic.forum_id     = 71;
+	ipb.topic.redirectPost = 1;
+	ipb.topic.start_id     = 0;
+	ipb.topic.page_id      = 0;
+	ipb.topic.topPid       = 0;
+	ipb.topic.counts       = { postTotal: 73,
+							  curStart:  ipb.topic.start_id,
+							  perPage:   25 };
+	//Search Setup
+	ipb.vars['search_type']			= 'forum';
+	ipb.vars['search_type_id']		= 71;
+	ipb.vars['search_type_2']		= 'topic';
+	ipb.vars['search_type_id_2']	= 12836;
+	
+	
+	// Delete stuff set up
+	ipb.topic.deleteUrls['hardDelete'] = new Template( ipb.vars['base_url'] + "app=forums&module=moderate&section=moderate&do=04&f=71&t=12836&page=&auth_key=880ea6a14ea49e853634fbdc5015a024&p=#{pid}" );
+	ipb.topic.deleteUrls['softDelete'] = new Template( ipb.vars['base_url'] + "app=forums&module=moderate&section=moderate&do=postchoice&tact=sdelete&t=12836&f=71&auth_key=880ea6a14ea49e853634fbdc5015a024&selectedpids[#{pid}]=#{pid}&pid=#{pid}" );
+	
+	
+	ipb.topic.modPerms	  = [];
+	
+	
+	ipb.templates['post_moderation'] = new Template("<div id='comment_moderate_box' class='ipsFloatingAction' style='display: none'><span class='desc'>C <span id='comment_count'>#{count}</span> отмеченными: </span><select id='tactInPopup' class='input_select'><option value='approve'>Подтвердить</option><option value='delete'>Скрыть</option><option value='sundelete'>Показать</option><option value='deletedo'>Удалить</option><option value='merge'>Объединить</option><option value='split'>Разделить</option><option value='move'>Переместить</option></select>&nbsp;&nbsp;<input type='button' class='input_submit' id='submitModAction' value='Ок' /></div>");
+	
+//]]>
+
+
+
+
+
+Терминалы Оплаты Реутов Телекома
+
+		 Автор 
+	support
+, Апр 13 2012 05:33 
+
+
+
+
+
+
+
+
+
+
+Страница 1 из 3 
+
+						ipb.global.registerPageJump( '0301857001', { url: "http://forum.reutov.ru/index.php?s=f658d13ed08e3941879acc45878dd74b&amp;showtopic=12836", stKey: 'st', perPage: 25, totalPages: 3, anchor: '' } );
+					
+
+1
+
+2
+
+
+3
+
+
+
+Вперед
+
+
+
+Авторизуйтесь для ответа в теме
+
+
+
+
+		72 ответов в теме
+	
+
+
+
+
+
+
+
+
+
+
+
+					
+					#1
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 13 Апрель 2012 - 05:33 
+
+
+Уважаемые Абоненты!
+Теперь вы можете оплатить наши услуги без комиссии через терминалы Реутов-Телеком.
+Первые терминалы расположены по адресам:
+Ленина 1а (ТЦ Карат) 
+Победы 28 (офисный центр Победа») 
+Юбилейный 3в, (Пиццерия) 
+Котовского дом 12 магазин Карина 
+В ближайшее время будет установлено еще 6 терминала.
+Сеть терминалов будет постоянно расти,по этому просим вас прислать нам свои пожелания к месту их установки.
+
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96255', { domLikeStripId: 'like_post_96255', app: 'forums', type: 'pid', typeid: '96255' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96255);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96255') )
+	{
+		$('multiq_96255').show();
+	}
+	
+	if( $('toggle_post_96255') )
+	{
+		$('toggle_post_96255').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96255] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#2
+					
+
+
+
+	Ку-чан
+
+
+
+
+Ку-чан
+
+отаку дайо!
+
+
+
+
+Модераторы
+
+
+
+
+
+			2 026 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+Город:Нарисованный Мир
+
+
+
+
+
+
+					Отправлено 13 Апрель 2012 - 05:39 
+
+
+					ТЦ Курс на Южной было бы хорошо.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96256', { domLikeStripId: 'like_post_96256', app: 'forums', type: 'pid', typeid: '96256' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96256);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96256') )
+	{
+		$('multiq_96256').show();
+	}
+	
+	if( $('toggle_post_96256') )
+	{
+		$('toggle_post_96256').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96256] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#3
+					
+
+
+
+	Gal
+
+
+
+
+Gal
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			426 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+Город:Реутов
+
+
+
+
+
+
+					Отправлено 13 Апрель 2012 - 05:41 
+
+
+					хорошо бы еще рядом со стадионом и у дк
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96257', { domLikeStripId: 'like_post_96257', app: 'forums', type: 'pid', typeid: '96257' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96257);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96257') )
+	{
+		$('multiq_96257').show();
+	}
+	
+	if( $('toggle_post_96257') )
+	{
+		$('toggle_post_96257').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96257] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#4
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 16 Апрель 2012 - 05:56 
+
+
+					Добрый вечер.
+Спасибо большое, что отозвались на нашу тему.
+При установки новых терминалов, мы постараемся учесть Ваши пожелания. 
+Также просим продолжать высказывать Ваши пожелания.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96331', { domLikeStripId: 'like_post_96331', app: 'forums', type: 'pid', typeid: '96331' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96331);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96331') )
+	{
+		$('multiq_96331').show();
+	}
+	
+	if( $('toggle_post_96331') )
+	{
+		$('toggle_post_96331').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96331] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#5
+					
+
+
+
+	vladimir22
+
+
+
+
+vladimir22
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			791 сообщений
+		
+
+
+
+
+
+
+
+					Отправлено 17 Апрель 2012 - 08:44 
+
+
+со стадионом согласен , проходное место ( например перекресток или BEER Маг)  хорошие места  так сказать .а вообще не плохо бы было в курсе поставить и в карате , да и самое главное что бы терминалы работали всю неделю а не только в рабочие дни .
+
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96361', { domLikeStripId: 'like_post_96361', app: 'forums', type: 'pid', typeid: '96361' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96361);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96361') )
+	{
+		$('multiq_96361').show();
+	}
+	
+	if( $('toggle_post_96361') )
+	{
+		$('toggle_post_96361').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96361] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#6
+					
+
+
+
+	mailo
+
+
+
+
+mailo
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			612 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 17 Апрель 2012 - 08:47 
+
+
+со стадионом согласен , проходное место ( например перекресток или BEER Маг)  хорошие места  так сказать .а вообще не плохо бы было в курсе поставить и в карате , да и самое главное что бы терминалы работали всю неделю а не только в рабочие дни .В карате и так есть офис.Надо в РИО ставить.
+					
+					
+
+							Сообщение отредактировал mailo: 17 Апрель 2012 - 09:00 
+							
+						
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96362', { domLikeStripId: 'like_post_96362', app: 'forums', type: 'pid', typeid: '96362' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96362);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96362') )
+	{
+		$('multiq_96362').show();
+	}
+	
+	if( $('toggle_post_96362') )
+	{
+		$('toggle_post_96362').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96362] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#7
+					
+
+
+
+	vladimir22
+
+
+
+
+vladimir22
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			791 сообщений
+		
+
+
+
+
+
+
+
+					Отправлено 17 Апрель 2012 - 09:20 
+
+
+В карате и так есть офис.Надо в РИО ставить.да пусть будет офис , лижбы по выходным работал
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96363', { domLikeStripId: 'like_post_96363', app: 'forums', type: 'pid', typeid: '96363' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96363);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96363') )
+	{
+		$('multiq_96363').show();
+	}
+	
+	if( $('toggle_post_96363') )
+	{
+		$('toggle_post_96363').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96363] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#8
+					
+
+
+
+	случайный человек
+
+
+
+
+случайный человек
+
+Status: Trying To Live
+
+
+
+
+Модераторы
+
+
+
+
+
+			861 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+Город:МСК
+
+
+
+
+
+
+					Отправлено 17 Апрель 2012 - 11:04 
+
+
+					В Карате рядом с офисом два терминала ... или они в выходные тоже не работают?...
+					
+					
+
+							Сообщение отредактировал случайный человек: 17 Апрель 2012 - 11:04 
+							
+						
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96364', { domLikeStripId: 'like_post_96364', app: 'forums', type: 'pid', typeid: '96364' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96364);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96364') )
+	{
+		$('multiq_96364').show();
+	}
+	
+	if( $('toggle_post_96364') )
+	{
+		$('toggle_post_96364').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96364] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#9
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 17 Апрель 2012 - 04:45 
+
+
+Добрый вечер.В нашем офисе на Ленина 1А в ТЦ Карат, установленно 2 терминала оплаты.В них, разумеесть, не береться коммиссия.Терминалы доступны в рабочие часы ТЦ Карат. 
+
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96376', { domLikeStripId: 'like_post_96376', app: 'forums', type: 'pid', typeid: '96376' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96376);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96376') )
+	{
+		$('multiq_96376').show();
+	}
+	
+	if( $('toggle_post_96376') )
+	{
+		$('toggle_post_96376').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96376] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#10
+					
+
+
+
+	zingeroud
+
+
+
+
+zingeroud
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			183 сообщений
+		
+
+
+
+
+
+
+
+					Отправлено 22 Апрель 2012 - 12:22 
+
+
+					в КУРСЕ, на первом этаже "перекресток" стоит терминал, там от 500 рублей без процентов!, сам там пополняю.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96467', { domLikeStripId: 'like_post_96467', app: 'forums', type: 'pid', typeid: '96467' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96467);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96467') )
+	{
+		$('multiq_96467').show();
+	}
+	
+	if( $('toggle_post_96467') )
+	{
+		$('toggle_post_96467').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96467] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#11
+					
+
+
+
+	Мамонт
+
+
+
+
+Мамонт
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			616 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 23 Апрель 2012 - 09:18 
+
+
+ г.Реутов, Юбилейный пр-кт, д.2а ТЦ «Реутовский»А можно, как в нормальных фирмах более подробное расположение (уж верх уважения к клиентам будет с картинками) .Или вы предлагаете по всему ТЦ бегать?Как же тяжело с конкуренцией в Реутове.......
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96495', { domLikeStripId: 'like_post_96495', app: 'forums', type: 'pid', typeid: '96495' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96495);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96495') )
+	{
+		$('multiq_96495').show();
+	}
+	
+	if( $('toggle_post_96495') )
+	{
+		$('toggle_post_96495').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96495] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#12
+					
+
+
+
+	Sunduk
+
+
+
+
+Sunduk
+
+Активный участник
+
+
+
+
+Супермодераторы
+
+
+
+
+
+			1 552 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+Город:Реутов
+
+
+
+
+
+
+					Отправлено 24 Апрель 2012 - 01:18 
+
+
+А можно, как в нормальных фирмах более подробное расположение (уж верх уважения к клиентам будет с картинками) .Или вы предлагаете по всему ТЦ бегать?Как же тяжело с конкуренцией в Реутове.......Скоро всем все расскажут где установлены терминалы. в данный момент только проводится установка девайсов...
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96498', { domLikeStripId: 'like_post_96498', app: 'forums', type: 'pid', typeid: '96498' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96498);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96498') )
+	{
+		$('multiq_96498').show();
+	}
+	
+	if( $('toggle_post_96498') )
+	{
+		$('toggle_post_96498').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96498] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#13
+					
+
+
+				
+				
+					
+	Guest_АК_*
+
+				
+			
+				
+			
+
+
+Guest_АК_*
+
+
+
+
+
+			Гости
+		
+
+
+
+
+
+					Отправлено 27 Апрель 2012 - 08:16 
+
+
+					Тоже только за интернет? Или таки можно и за телефон заплатить?
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96561', { domLikeStripId: 'like_post_96561', app: 'forums', type: 'pid', typeid: '96561' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96561);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96561') )
+	{
+		$('multiq_96561').show();
+	}
+	
+	if( $('toggle_post_96561') )
+	{
+		$('toggle_post_96561').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96561] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#14
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 27 Апрель 2012 - 10:41 
+
+
+					Да можно будет оплатить только интернет.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96569', { domLikeStripId: 'like_post_96569', app: 'forums', type: 'pid', typeid: '96569' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96569);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96569') )
+	{
+		$('multiq_96569').show();
+	}
+	
+	if( $('toggle_post_96569') )
+	{
+		$('toggle_post_96569').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96569] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#15
+					
+
+
+
+	Boris3000
+
+
+
+
+Boris3000
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			585 сообщений
+		
+
+
+
+Пол:Паркетный
+
+
+Город:Малые Ништяки
+
+
+
+
+
+
+					Отправлено 29 Апрель 2012 - 07:39 
+
+
+в КУРСЕ, на первом этаже "перекресток" стоит терминал, там от 500 рублей без процентов!, сам там пополняю.Хоспаде, удивил. На станции на северной (старой) стороне куча палаток. Среди них есть жёлтая (вроде), торгующая мобильниками и работающая круглосуточно. В ней терминал не берёт комиссию вообще.Сеть терминалов будет постоянно расти,по этому просим вас прислать нам свои пожелания к месту их установки.В Дикси (Победы, 15). Там есть какой-то терминал, он комиссию берёт?
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96628', { domLikeStripId: 'like_post_96628', app: 'forums', type: 'pid', typeid: '96628' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96628);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96628') )
+	{
+		$('multiq_96628').show();
+	}
+	
+	if( $('toggle_post_96628') )
+	{
+		$('toggle_post_96628').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96628] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#16
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 29 Апрель 2012 - 08:02 
+
+
+Хоспаде, удивил. На станции на северной (старой) стороне куча палаток. Среди них есть жёлтая (вроде), торгующая мобильниками и работающая круглосуточно. В ней терминал не берёт комиссию вообще.В Дикси (Победы, 15). Там есть какой-то терминал, он комиссию берёт?Есть еще терминалы ОСМП, через них тоже можно оплачивать интернет, список адресов приведен на сайте reutov.ru в разделе "Способы оплаты". Там могут взымать комиссию за оплату.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96629', { domLikeStripId: 'like_post_96629', app: 'forums', type: 'pid', typeid: '96629' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96629);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96629') )
+	{
+		$('multiq_96629').show();
+	}
+	
+	if( $('toggle_post_96629') )
+	{
+		$('toggle_post_96629').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96629] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#17
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 02 Май 2012 - 12:05 
+
+
+					Обновленный список терминалов Реутов Телекома :Ленина 1а (ТЦ Карат)Победы 30 (офис страхования)Юбилейный 2а (ТЦ Реутовский)Юбилейный 8  (стоматологическая клиника)
+
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96675', { domLikeStripId: 'like_post_96675', app: 'forums', type: 'pid', typeid: '96675' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96675);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96675') )
+	{
+		$('multiq_96675').show();
+	}
+	
+	if( $('toggle_post_96675') )
+	{
+		$('toggle_post_96675').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96675] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#18
+					
+
+
+
+	Boris3000
+
+
+
+
+Boris3000
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			585 сообщений
+		
+
+
+
+Пол:Паркетный
+
+
+Город:Малые Ништяки
+
+
+
+
+
+
+					Отправлено 03 Май 2012 - 02:15 
+
+
+					Ещё б неплохо их режим работы указать...
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96685', { domLikeStripId: 'like_post_96685', app: 'forums', type: 'pid', typeid: '96685' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96685);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96685') )
+	{
+		$('multiq_96685').show();
+	}
+	
+	if( $('toggle_post_96685') )
+	{
+		$('toggle_post_96685').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96685] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#19
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 03 Май 2012 - 10:08 
+
+
+					Терминалы работают круглосуточно.А доступность их зависит от времени работы того помещения, где они установлены.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96689', { domLikeStripId: 'like_post_96689', app: 'forums', type: 'pid', typeid: '96689' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96689);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96689') )
+	{
+		$('multiq_96689').show();
+	}
+	
+	if( $('toggle_post_96689') )
+	{
+		$('toggle_post_96689').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96689] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#20
+					
+
+
+
+	Boris3000
+
+
+
+
+Boris3000
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			585 сообщений
+		
+
+
+
+Пол:Паркетный
+
+
+Город:Малые Ништяки
+
+
+
+
+
+
+					Отправлено 03 Май 2012 - 11:40 
+
+
+доступность их зависит от времени работы того помещения, где они установлены.От этого не легче. Значит указать режим работы помещения.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96694', { domLikeStripId: 'like_post_96694', app: 'forums', type: 'pid', typeid: '96694' }, parseInt('0') );
+
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96694);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96694') )
+	{
+		$('multiq_96694').show();
+	}
+	
+	if( $('toggle_post_96694') )
+	{
+		$('toggle_post_96694').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96694] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#21
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 03 Май 2012 - 12:31 
+
+
+					Техническая поддержка не обладает информацией как работают торговые центры и прочие заведения в городе Реутов.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96703', { domLikeStripId: 'like_post_96703', app: 'forums', type: 'pid', typeid: '96703' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96703);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96703') )
+	{
+		$('multiq_96703').show();
+	}
+	
+	if( $('toggle_post_96703') )
+	{
+		$('toggle_post_96703').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96703] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#22
+					
+
+
+
+	дед кузьмич
+
+
+
+
+дед кузьмич
+
+Активный участник
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			334 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 03 Май 2012 - 04:17 
+
+
+					так когда уже заработают? вчера в ТЦ реутовский мимо проходил, не работал.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96707', { domLikeStripId: 'like_post_96707', app: 'forums', type: 'pid', typeid: '96707' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96707);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96707') )
+	{
+		$('multiq_96707').show();
+	}
+	
+	if( $('toggle_post_96707') )
+	{
+		$('toggle_post_96707').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96707] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#23
+					
+
+
+
+	серёжа
+
+
+
+
+серёжа
+
+Новичок
+
+
+
+
+			Пользователи
+		
+
+
+
+
+			2 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+Город:реутов
+
+
+
+
+
+
+					Отправлено 06 Май 2012 - 06:49 
+
+
+					в КУРС точно надо.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_96750', { domLikeStripId: 'like_post_96750', app: 'forums', type: 'pid', typeid: '96750' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(96750);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_96750') )
+	{
+		$('multiq_96750').show();
+	}
+	
+	if( $('toggle_post_96750') )
+	{
+		$('toggle_post_96750').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[96750] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#24
+					
+
+
+				
+				
+					
+	Guest_Быковская Наталья_*
+
+				
+			
+				
+			
+
+
+Guest_Быковская Наталья_*
+
+
+
+
+
+			Гости
+		
+
+
+
+
+
+					Отправлено 15 Июнь 2012 - 11:31 
+
+
+					Уважаемая администрация! Во-первых, большое спасибо за прекрасную работу! Ну, и во-вторых, поддерживаю предложения о локализации терминалов оплаты в магазине "Перекресток" на ул. Комсомольская и в ТРЦ РИО. Здорово, что появится больше возможностей оплаты услуг. Так держать!
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_97418', { domLikeStripId: 'like_post_97418', app: 'forums', type: 'pid', typeid: '97418' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(97418);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_97418') )
+	{
+		$('multiq_97418').show();
+	}
+	
+	if( $('toggle_post_97418') )
+	{
+		$('toggle_post_97418').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[97418] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+					
+					#25
+					
+
+
+
+	support
+
+
+
+
+support
+
+Техподдержка
+
+
+
+
+Администраторы
+
+
+
+
+
+			2 922 сообщений
+		
+
+
+
+Пол:Мужской
+
+
+
+
+
+
+					Отправлено 16 Июнь 2012 - 12:16 
+
+
+					Большое спасибо за Вши пожелания.
+Нам очень приятно, что вы цените нашу работу.
+Мы будем стараться учесть мнения всех.
+					
+					
+
+
+
+
+						
+						
+						
+							0
+							
+
+
+
+
+	ipb.global.registerReputation( 'rep_post_97419', { domLikeStripId: 'like_post_97419', app: 'forums', type: 'pid', typeid: '97419' }, parseInt('0') );
+
+
+Наверх
+
+
+
+
+
+
+var pid = parseInt(97419);
+if ( pid > ipb.topic.topPid ){
+	ipb.topic.topPid = pid;
+}
+
+	// Show multiquote for JS browsers
+	if ( $('multiq_97419') )
+	{
+		$('multiq_97419').show();
+	}
+	
+	if( $('toggle_post_97419') )
+	{
+		$('toggle_post_97419').show();
+	}
+	
+	// Add perm data
+	ipb.topic.deletePerms[97419] = { 'canDelete' : 0, 'canSoftDelete' : 0 };
+
+
+
+
+
+
+
+
+
+
+
+Страница 1 из 3 
+
+						ipb.global.registerPageJump( '0301857001', { url: "http://forum.reutov.ru/index.php?s=f658d13ed08e3941879acc45878dd74b&amp;showtopic=12836", stKey: 'st', perPage: 25, totalPages: 3, anchor: '' } );
+					
+
+1
+
+2
+
+
+3
+
+
+
+Вперед
+
+
+
+Обратно в Терминалы оплаты Реутов Телекома
+
+
+
+
+
+
+
+
+
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=242244379168807";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+	
+		{lang: 'ru'}
+	
+
+
+
+
+
+
+
+
+
+		ipb.sharelinks.url   = "http://forum.reutov.ru/index.php?showtopic=12836";
+		ipb.sharelinks.title = "Терминалы Оплаты Реутов Телекома";
+		ipb.sharelinks.bname = "Форумы г.Реутов";
+	
+
+
+
+
+
+
+1 посетителей читают тему
+0 members, 1 guests, 0 anonymous users
+
+
+
+
+
+
+	//<![CDATA[
+		Event.observe( window, 'load', function(e){ prettyPrint() });
+	//]]>
+	
+
+Ответить цитируемым сообщениям     Очистить    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Форумы г.Реутов
+→ Официальная информация
+→ Терминалы оплаты Реутов Телекома
+
+Privacy Policy
+
+
+Правила форума · 
+						
+
+
+
+
+
+
+
+
+
+
+Изменить стиль
+
+
+IP.Board
+
+
+IP.Board Mobile
+
+
+reutov
+
+
+
+
+Russian
+
+
+English (ENG)
+
+
+Russian
+
+
+
+
+Помощь
+
+
+
+
+Community Forum Software by IP.BoardЛицензия зарегистрирована на: forum.reutov.ru
+
+
+
+
+
+//<![CDATA[
+	// Lightbox Configuration
+	LightboxOptions = Object.extend({
+	    fileLoadingImage:        'http://forum.reutov.ru/public/style_images/master/lightbox/loading.gif',
+	    fileBottomNavCloseImage: 'http://forum.reutov.ru/public/style_images/master/lightbox/closelabel.gif',
+	    overlayOpacity: 0.8,   // controls transparency of shadow overlay
+	    animate: true,         // toggles resizing animations
+	    resizeSpeed: 10,        // controls the speed of the image resizing animations (1=slowest and 10=fastest)
+	    borderSize: 10,         //if you adjust the padding in the CSS, you will need to update this variable
+		// When grouping images this is used to write: Image # of #.
+		// Change it for non-english localization
+		labelImage: "Изображение",
+		labelOf: "из"
+	}, window.LightboxOptions || {});
+/* Watch for a lightbox image and set up our downloadbutton watcher */
+document.observe('click', (function(event){
+    var target = event.findElement('a[rel*="lightbox"]') || event.findElement('area[rel*="lightbox"]') || event.findElement('span[rel*="lightbox"]');
+    if (target) {
+        event.stop();
+        gbl_addDownloadButton();
+    }
+}).bind(this));
+var _to    = '';
+var _last  = '';
+function gbl_addDownloadButton()
+{
+	if ( typeof( ipsLightbox.lightboxImage ) != 'undefined' && ipsLightbox.lightboxImage.src )
+	{
+		if ( _last != ipsLightbox.lightboxImage.src )
+		{
+			if ( ! $('gbl_d') )
+			{
+				$('bottomNav').insert( { top: "<div id='gbl_d' style='text-align:right;padding-bottom:4px;'></div>" } );
+			}
+			
+			$('gbl_d').update( "<a href='"+ ipsLightbox.lightboxImage.src + "' target='_blank'><img src='http://forum.reutov.ru/public/style_images/master/lightbox/download-icon.png' /></a>" );
+			
+			_last = ipsLightbox.lightboxImage.src;
+		}
+	}
+	
+	/* Check for init and then keep checking for new image */
+	_to = setTimeout( "gbl_addDownloadButton()", 1000 );
+}
+//]]>
+
+
+
+
+
+Войти
+
+
+
+
+
+
+									Необходим аккаунт? Зарегистрируйтесь сейчас!
+
+
+
+Имя пользователя:
+
+
+
+
+
+Forum Password
+
+
+Я забыл свой пароль
+
+
+
+
+
+
+Запомнить меня
+Это не рекомендуется для публичных компьютеров
+
+
+
+
+
+
+
+Войти анонимно
+Не добавлять меня в список активных пользователей
+
+
+
+
+Privacy Policy
+
+
+
+
+
+
+
+
+
+
+
+			if( $('primary_nav') ){	ipb.global.activateMainMenu(); }
+		
+
