@@ -1,7 +1,6 @@
 from tqdm import tqdm
-import requests, re
+import requests
 from bs4 import BeautifulSoup
-import json
 
 
 def load_data(session, page, url):
@@ -14,49 +13,19 @@ def load_data(session, page, url):
 def work_file(soup, page, users):
     with open('./page_%d.html' % page, 'w', encoding="utf-8") as htmlfile:
         htmlfile.write(soup.text)
-    with open('dataset.json', 'a') as f:
-        dataset = json.dumps('"Nik";"status";"data";"info"' + '\n', indent=4)
 
-    Nikdict = []
+    dates_nicknames = []
 
     for i in range(users):
-        # Ник будем использовать за уникальное поле
-        Nik = soup.find_all('h3')[i].get_text()
+        nickname = soup.find_all('h3')[i].get_text()
         data = soup.find_all(class_='posted_info desc lighter ipsType_small')[i].get_text()
-        data = data.replace("		  			  Отправлено ", "")
-        # tet = soup.find("div", itemprop="commentText", class_="post entry-content ")
-        # Пробуем получить статус, инфо(город и пол), ccылки
-        try:
-            ad_url = re.sub(r'"', '', [i.xpath(ID + '/div/div[2]/div[3]/a[2]')[0].text for i in ID])
-        except:
-            ad_url = ''
-        # Получаем доступные ссылки
-        try:
-            info = re.sub(r'"', '', [i.xpath(ID + '/div/div[1]/div/ul[2]')[0].text for i in ID])
-        except:
-            info = ''
-        try:
-            status = re.sub(r'"', '', [i.xpath(ID + '/div/div[1]/div/li[1]/li[2]/p')[0].text for i in ID])
-        except:
-            status = ''
+        data = data.replace("\n\t\t\t\t\tОтправлено ", "").replace("\n", "")
 
-        # Если объявление с таким номером уже есть, не добавляем его
-        if Nik in Nikdict:
-            # with open('dataset.json','a') as f:
-            dataset = json.dumps('"\n"+'"'+data+'"';'"'+ad_h1+'"'+"\n"', indent=4)
-            # f.write('"'+Nik+'";"'+status+'";"'+data+'";"'+tet+'";"'+info+'"'+'\n')
-        else:
-            dataset = json.dumps('"\n"+'"'+Nik+'"';'"'+status+'"';'"'+data+'"';'"'+info+'"'+"\n"', indent=4)
-            Nik = Nik.rstrip().strip()
-            Nik = Nik.split('#')
-            Nik = list(filter(None, Nik))
-            Nikdict.append(Nik)
+        if nickname not in dates_nicknames:
+            nickname = nickname.strip().replace("\t", "").replace("\n", "")
+            dates_nicknames.append({data: nickname})
 
-            # Очищаем строку от ненужных символов
-    print(Nikdict)
-
-    f.close()
-    htmlfile.close()
+    print(dates_nicknames)
 
 
 def main():
