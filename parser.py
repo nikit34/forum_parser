@@ -62,7 +62,8 @@ def workfile(soup, page, users):
 def main():
     s = requests.Session()
     s.headers.update({
-                         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'})
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    })
     # Количество страниц в теме, количество пользователей на странице и url темы
     pages = 3
     users = 25
