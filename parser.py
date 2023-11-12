@@ -4,15 +4,15 @@ from bs4 import BeautifulSoup
 import json
 
 
-def loaddata(session, page, url):
-    url = url + '&page=%d' % (page)
+def load_data(session, page, url):
+    url = url + '&page=%d' % page
     request = session.get(url)
     response = BeautifulSoup(request.text, 'html.parser')
     return response
 
 
-def workfile(soup, page, users):
-    with open('./page_%d.html' % (page), 'w', encoding="utf-8") as htmlfile:
+def work_file(soup, page, users):
+    with open('./page_%d.html' % page, 'w', encoding="utf-8") as htmlfile:
         htmlfile.write(soup.text)
     with open('dataset.json', 'a') as f:
         dataset = json.dumps('"Nik";"status";"data";"info"' + '\n', indent=4)
@@ -69,8 +69,8 @@ def main():
     users = 25
     url = 'http://forum.reutov.ru/index.php?showtopic=12836'
     for page in tqdm(range(pages)):
-        request = loaddata(s, page, url)
-        workfile(request, page, users)
+        request = load_data(s, page, url)
+        work_file(request, page, users)
 
 
 if __name__ == "__main__":
